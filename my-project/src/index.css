@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* common Css File For every component */
+:root{
+    --bgColor : linear-gradient(90deg, #FAFAFA, #F5EDED, #FAFAFA);
+    --mainBg : #E2E8F0;
+    --bgColortwo : linear-gradient(90deg, #752A9B, #38ACD7);
+    --textColorOne : #F8FAFB;
+    --textColorTwo : #38ACD7;
+    --textColorThree : #9DB3BD;
+    --Oswald : "Oswald", sans-serif;
+    --JosefinSans : "Josefin Sans", sans-serif;
+}
+
+
+@layer base {
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+    *{
+        @apply m-0 p-0 box-border
+    }
+
+    ul,ol,li{
+        @apply m-0 p-0 no-underline 
+    }
+    img{
+        @apply  align-middle inline-block
+    }
+    h1,h2,h3,h4,h5,h6,img,div{
+        @apply m-0 p-0
+    }
+};
