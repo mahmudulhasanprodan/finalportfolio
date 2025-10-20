@@ -15,7 +15,7 @@ dotenv.config();
 
 // Cors
 app.use(cors({
- origin : "http://localhost:5173",
+ origin : "https://finalportfolio-server.onrender.com",
  methods : "GET,PUT,POST,DELETE",
 }))
 
