@@ -14,10 +14,10 @@ const app = express();
 dotenv.config();
 
 // Cors
-app.use(cors({
- origin : "https://finalportfolio-fronend.onrender.com/",
- methods : "GET,PUT,POST,DELETE",
-}))
+// app.use(cors({
+//  origin : "https://finalportfolio-fronend.onrender.com/",
+//  methods : "GET,PUT,POST,DELETE",
+// }))
 
 // Database Connection 
 mongoose.connect(process.env.CONNECTION_STRING)
