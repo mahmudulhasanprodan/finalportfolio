@@ -61,7 +61,8 @@ const Handlechange = (e) => {
           // setcontactModal(false);
         }else{
           const data = await res.json();
-           alert(data.msg)
+          console.log(data)
+           // alert(data.msg)
           setcontactModal(false);
         }
           
