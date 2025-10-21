@@ -49,10 +49,10 @@ const Handlechange = (e) => {
            headers: {
              "Content-Type": "application/json",
            },
-           body: JSON.parse(contactData),
+           body: JSON.stringify(contactData),
          
         });
-        const data = await res.json();
+        const data = await res.text();
         if(res.ok){
           alert(data.msg)
           setcontactModal(false);
