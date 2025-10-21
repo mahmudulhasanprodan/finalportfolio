@@ -52,7 +52,7 @@ const Handlechange = (e) => {
            body: JSON.stringify(contactData),
          
         });
-        const data = await res.text();
+        const data = await res.json();
         if(res.ok){
           alert(data.msg)
           setcontactModal(false);
