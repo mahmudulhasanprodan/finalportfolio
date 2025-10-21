@@ -18,7 +18,7 @@ dotenv.config();
 //  origin : "https://finalportfolio-fronend.onrender.com/",
 //  methods : "GET,PUT,POST,DELETE",
 // }))
-app.use(cors());
+app.use(cors({ origin: "https://finalportfolio-fronend.onrender.com" }));
 
 // Database Connection 
 mongoose.connect(process.env.CONNECTION_STRING)
