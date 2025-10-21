@@ -4,6 +4,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 import { LuArrowRight } from "react-icons/lu";
 import { useContext } from "react";
 import { ThemeProvider } from "../../Utils/ThemContex";
+import download from "../../assets/MahmudulHasan.pdf"
 
 const Banner = () => {
   const { themeUser } = useContext(ThemeProvider);
@@ -82,7 +83,7 @@ const Banner = () => {
                     </span>
                   </button>
                 </a>
-                <a href="./../../assets/MahmudulHasan.pdf" download={"MahmudulHasan.pdf"}>
+                <a href={download} download={download}>
                   <button
                     className={`${
                       themeUser === "light"
