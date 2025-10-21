@@ -38,10 +38,10 @@ app.use(express.urlencoded({extended : true}))
 app.use("/usersms", userRouter);
 
 //  === Serve Frontend in Production ===  //
-app.use(express.static(path.join(__dirname, "../my-project/dist")));
+app.use(express.static(path.join(__dirname, "my-project" , "dist" )));
 
 app.all("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../my-project/dist/index.html"));
+  res.sendFile(path.join(__dirname, "my-project", "dist", "index.html"));
 });
 
 
