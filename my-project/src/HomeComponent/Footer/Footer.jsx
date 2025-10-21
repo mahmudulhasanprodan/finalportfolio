@@ -44,7 +44,7 @@ const Handlechange = (e) => {
    const Handlesubmit = async (e) => {
     e.preventDefault();
       try {
-         const res = await fetch("https://finalportfolio-server.onrender.com/usersms", {
+         const res = await fetch("https://finalportfolio-server.onrender.com", {
            method: "POST",
            headers: {
              "Content-Type": "application/json",
