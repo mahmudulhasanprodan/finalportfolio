@@ -44,12 +44,12 @@ const Handlechange = (e) => {
    const Handlesubmit = async (e) => {
     e.preventDefault();
       try {
-         const res = await fetch("https://finalportfolio-server.onrender.com", {
+         const res = await fetch("https://finalportfolio-server.onrender.com/usersms", {
            method: "POST",
            headers: {
              "Content-Type": "application/json",
            },
-           body: JSON.stringify(contactData),
+           body: JSON.stringify({name, email , message}),
          
         });
           // Read response as text first
@@ -62,7 +62,7 @@ const Handlechange = (e) => {
       // if not JSON, just log the raw text
       console.error("Backend did not return valid JSON:", text);
       data = { error: text };
-    }
+    };
         
         if(res.ok){
           alert(data.msg)
