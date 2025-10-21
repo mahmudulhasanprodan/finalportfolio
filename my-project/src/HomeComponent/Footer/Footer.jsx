@@ -200,7 +200,7 @@ const Handlechange = (e) => {
                     id="name"
                     onChange={Handlechange}
                   />
-                   {storeData.name && <p className="font-JosefinSans text-red-700">{storeData.name.msg}</p>}
+                   {storeData && <p className="font-JosefinSans text-red-700">{storeData.name.msg}</p>}
                 </div>
                 <div className="flex flex-col gap-y-3">
                   <label
@@ -216,7 +216,7 @@ const Handlechange = (e) => {
                     className="border px-3 py-2 rounded-lg w-[300px] md:w-[400px]"
                      onChange={Handlechange}
                   />
-                   {storeData.email && <p className="font-JosefinSans text-red-700">{storeData.email.msg}</p>}
+                   {storeData  && <p className="font-JosefinSans text-red-700">{storeData.email.msg}</p>}
                 </div>
                 <div className="flex flex-col gap-y-3">
                   <label htmlFor="" className="font-JosefinSans font-semibold">
@@ -229,7 +229,7 @@ const Handlechange = (e) => {
                     onChange={Handlechange}           
                   >
                   </textarea>
-                  {storeData.message && <p className="font-JosefinSans text-red-700">{storeData.message.msg}</p>}
+                  {storeData  && <p className="font-JosefinSans text-red-700">{storeData.message.msg}</p>}
                 </div>
                 <button className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 w-72 pt-3" type="submit">
                   Send Message
