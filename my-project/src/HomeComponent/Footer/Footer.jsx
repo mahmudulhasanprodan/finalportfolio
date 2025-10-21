@@ -52,12 +52,17 @@ const Handlechange = (e) => {
            body: JSON.stringify(contactData),
          
         });
-        const data = await res.json();
-        if(res.ok){
-          alert(data.msg)
-          setcontactModal(false);
+        
+        if(!res.ok){
+          const text = await res.text(); // see raw error message
+          throw new Error(`Server error: ${text}`);
+          console.log(text)
+          // alert(data.msg)
+          // setcontactModal(false);
         }else{
-          setstoreData(data.error)
+          const data = await res.json();
+           alert(data.msg)
+          setcontactModal(false);
         }
           
       } catch (error) {
