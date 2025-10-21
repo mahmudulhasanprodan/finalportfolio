@@ -19,7 +19,7 @@ dotenv.config();
 //  methods : "GET,PUT,POST,DELETE",
 // }))
 app.use(cors({
-  origin: "https://finalportfolio-fronend.onrender.com",
+  origin: "https://finalportfolio-coco.onrender.com",
   methods: ["GET", "POST"],
   credentials: true,
 }));
