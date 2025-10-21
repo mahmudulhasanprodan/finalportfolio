@@ -49,7 +49,7 @@ const Handlechange = (e) => {
            headers: {
              "Content-Type": "application/json",
            },
-           body: JSON.parse(contactData),
+           body: JSON.stringify(contactData),
          
         });
         const data = await res.text();
