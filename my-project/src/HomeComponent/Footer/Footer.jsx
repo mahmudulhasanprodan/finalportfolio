@@ -52,7 +52,18 @@ const Handlechange = (e) => {
            body: JSON.stringify(contactData),
          
         });
-         const data = await res.json();
+          // Read response as text first
+        const text = await res.text();
+
+        let data;
+      try {
+      data = JSON.parse(text); // try parsing JSON
+      } catch {
+      // if not JSON, just log the raw text
+      console.error("Backend did not return valid JSON:", text);
+      data = { error: text };
+    }
+        
         if(res.ok){
           alert(data.msg)
           setcontactModal(false);
